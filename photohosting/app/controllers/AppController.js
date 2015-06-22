@@ -1,10 +1,11 @@
-
+/*
+Application controller.
+*/
 
 function AppController($scope, $log, commonServices) {
     var self = this;
 
     this.storageID = "#userPreferencesLocalStorage";
-
     //One email format for all inputs
     //So far we are using default html built in email validator
     //$scope.emailRegExp = "^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$";
