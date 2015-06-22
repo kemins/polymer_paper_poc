@@ -1,0 +1,41 @@
+<section class="content">
+
+    <form novalidate class="content-form">
+
+        <paper-input-decorator label="Your Email"
+                               floatingLabel
+                               error="Email should be in proper format.">
+
+            <input type="email" is="core-input" required ng-model="contactUsViewCtrl.message.email">
+        </paper-input-decorator>
+
+        <br>
+
+        <paper-input-decorator label="Your Name" floatingLabel
+                               error="Name is required.">
+            <input is="core-input" required ng-model="contactUsViewCtrl.message.firstName">
+        </paper-input-decorator>
+
+        <br>
+
+        <paper-input-decorator label="Subject" floatingLabel
+                               error="Subject is required.">
+            <input is="core-input" required ng-model="contactUsViewCtrl.message.subject">
+        </paper-input-decorator>
+
+        <br>
+
+        <paper-input-decorator floatingLabel label="Message"
+                               error="Message is required.">
+            <textarea rows="5" required="" ng-model="contactUsViewCtrl.message.text"></textarea>
+        </paper-input-decorator>
+
+        <br>
+
+        <paper-button raisedButton class="submit-button"
+                      ng-click="contactUsViewCtrl.submit($event)">Send
+        </paper-button>
+
+    </form>
+
+</section>

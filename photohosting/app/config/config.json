@@ -1,0 +1,6 @@
+{
+  "APP_PROTOCOL": "http",
+  "APP_SERVER": "localhost",
+  "APP_PORT": "8080",
+  "APP_CONTEXT_PATH": "photohosting"
+}

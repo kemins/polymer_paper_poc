@@ -1,0 +1,79 @@
+<div class="mainHolder">
+
+    <style>
+
+        core-animated-pages {
+            position: absolute;
+            top: 0px;
+            right: 0;
+            bottom: 0;
+            left: 0;
+            overflow: hidden;
+        }
+
+        core-toolbar {
+            height: 50px;
+        }
+
+        #page1 {
+            background-color: #eeeeee;
+        }
+
+        /* drawer is always visible on a wide screen
+        so menu button isn't required */
+        core-drawer-panel:not([narrow]) #navicon {
+            display: none;
+        }
+
+    </style>
+
+    <core-localstorage id="userPreferencesLocalStorage" name="userPreferences"></core-localstorage>
+
+    <core-drawer-panel id="drawerPanel">
+
+        <core-header-panel drawer class="left-nav-menu">
+            <core-toolbar id="menuToolbar">
+                <span>Menu</span>
+            </core-toolbar>
+            <core-menu id="navMenu" selected="0">
+
+                <core-item label="Sign In" icon="account-circle" ng-click="mainViewCtrl.menuItemClick($event)"
+                           data-index="0"></core-item>
+                <core-item label="Sign Up" icon="create" ng-click="mainViewCtrl.menuItemClick($event)"
+                           data-index="1"></core-item>
+                <core-item id="forgotPassItemAction"
+                           label="Remind Password" icon="refresh" ng-click="mainViewCtrl.menuItemClick($event)"
+                           data-index="2"></core-item>
+                <core-item id="forgotPassItemAction"
+                           label="Contact Us" icon="mail" ng-click="mainViewCtrl.menuItemClick($event)"
+                           data-index="3"></core-item>
+            </core-menu>
+        </core-header-panel>
+
+        <core-header-panel main>
+
+            <core-toolbar id="topToolbar">
+                <paper-icon-button id="backicon" icon="arrow-back" ng-click="mainViewCtrl.backItemClick($event)"
+                                   ng-disabled="mainViewCtrl.historyStack.length == 0"></paper-icon-button>
+                <span flex>Photo State</span>
+                <paper-icon-button id="navicon" icon="menu" ng-click="mainViewCtrl.toggleMenu($event)"></paper-icon-button>
+            </core-toolbar>
+
+            <core-animated-pages transitions="slide-from-right">
+
+
+                <login-view></login-view>
+
+                <registration-view></registration-view>
+
+                <forgot-pass-view></forgot-pass-view>
+
+                <contact-us-view></contact-us-view>
+
+            </core-animated-pages>
+
+        </core-header-panel>
+
+    </core-drawer-panel>
+
+</div>

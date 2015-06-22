@@ -1,0 +1,82 @@
+html {
+  height: 100%;
+  width: 100%;
+  margin: 0px; }
+  html body {
+    font-family: Roboto, "Helvetica Neue", Helvetica, Arial, sans-serif;
+    margin: 0;
+    height: 100%;
+    width: 100%; }
+    html body .main-view-holder {
+      width: 100%;
+      position: relative;
+      height: 100%;
+      margin: 0px;
+      padding: 0px; }
+    html body main-guest-view .mainHolder {
+      width: 100%;
+      height: 100%; }
+    html body core-header-panel {
+      height: 100%; }
+    html body .content {
+      background-color: #eeeeee;
+      overflow: auto;
+      width: 100%;
+      height: 100%; }
+    html body .content-form {
+      padding: 20px; }
+    html body #topToolbar {
+      background-color: #526e9c;
+      color: white; }
+    html body #menuToolbar {
+      background-color: #eeeeee;
+      color: #526e9c; }
+
+.left-nav-menu {
+  background: #526e9c;
+  color: #ffffff; }
+
+.submit-button {
+  margin: 0.8em 0em 0.8em 0em;
+  width: 9em;
+  background: #4285f4 !important;
+  color: #fff; }
+  .submit-button [raisedButton] #ripple,
+  .submit-button [raisedButton]::shadow #ripple {
+    color: #2a56c6; }
+  .submit-button [raisedButton].colored #focusBg,
+  .submit-button [raisedButton].colored::shadow #focusBg {
+    background: #3367d6; }
+
+.secondary-button {
+  margin: 0.8em 0em 0.8em 0em;
+  width: 9em;
+  background: #39ac74 !important;
+  color: #fff; }
+  .secondary-button [raisedButton] #ripple,
+  .secondary-button [raisedButton]::shadow #ripple {
+    color: #2a56c6; }
+  .secondary-button [raisedButton].colored #focusBg,
+  .secondary-button [raisedButton].colored::shadow #focusBg {
+    background: #3367d6; }
+
+paper-radio-group.blue paper-radio-button::shadow #ink[checked] {
+  color: #4285f4; }
+
+paper-radio-group.blue paper-radio-button::shadow #onRadio {
+  background-color: #4285f4; }
+
+paper-input-decorator, .defaultFormItem {
+  width: 80%; }
+
+progress-overlay {
+  width: 100%;
+  height: 100%;
+  top: 0px;
+  position: absolute;
+}
+
+.hidden{
+  display: none;
+  visibility: hidden;
+}

@@ -1,0 +1,53 @@
+<section id="registrationView" class="content">
+
+    <form novalidate class="content-form">
+
+        <paper-input-decorator label="First Name" floatingLabel
+                               error="First Name is required.">
+            <input is="core-input" required ng-model="registerViewCtrl.user.firstName">
+        </paper-input-decorator>
+
+        <br>
+
+        <paper-input-decorator label="Last Name" floatingLabel
+                               error="Last Name is required.">
+            <input is="core-input" required ng-model="registerViewCtrl.user.lastName">
+        </paper-input-decorator>
+
+        <br>
+
+        <paper-radio-group id="genderRadioButtonGroup" selected="male" class="blue">
+            <paper-radio-button name="male" label="Male"></paper-radio-button>
+            <paper-radio-button name="female" label="Female"></paper-radio-button>
+        </paper-radio-group>
+
+        <br>
+
+        <paper-input-decorator label="Your Email"
+                               floatingLabel
+                               error="Email should be in proper format.">
+
+            <input type="email" is="core-input" required ng-model="registerViewCtrl.user.email">
+        </paper-input-decorator>
+
+        <br>
+
+        <paper-input-decorator label="Password" floatingLabel
+                               pattern=".{5,}"
+                               error="Password should contain at least 5 characters.">
+            <input is="core-input" type="password" required ng-model="registerViewCtrl.user.password">
+        </paper-input-decorator>
+
+        <paper-input-decorator label="Confirm Password" floatingLabel
+                               error="It should match with password.">
+            <input id="regConfirmPasswordInput" is="core-input" type="password" required
+                   ng-model="registerViewCtrl.confirmPassword">
+        </paper-input-decorator>
+
+        <br>
+
+        <paper-button raisedButton class="submit-button"
+                      ng-click="registerViewCtrl.submit($event)">Sign Up
+        </paper-button>
+    </form>
+</section>

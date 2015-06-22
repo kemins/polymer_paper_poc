@@ -1,0 +1,127 @@
+$font-stack: Roboto, 'Helvetica Neue', Helvetica, Arial, sans-serif;
+$primary-color: #000000;
+
+
+$page-content-color: #eeeeee;
+$form-content-padding: 20px;
+
+$tool-bar-bg-color: #526e9c;
+$tool-bar-text-color: #ffffff;
+
+$left-menu-bg-color: #526e9c;
+$left-menu-top-bg-color: #eeeeee;
+$left-menu-top-text-color: #526e9c;
+
+$radio_btn_blue_color: #4285f4;
+
+$default_form_item_width: 80%;
+
+html {
+  height: 100%;
+  width: 100%;
+  margin: 0px;
+
+  body {
+    font-family: $font-stack;
+    margin: 0;
+    height: 100%;
+    width: 100%;
+
+    .main-view-holder {
+      width: 100%;
+      position: relative;
+      height: 100%;
+      margin: 0px;
+      padding: 0px;
+    }
+
+    main-guest-view {
+      .mainHolder {
+        width: 100%;
+        height: 100%;
+      }
+    }
+
+    core-header-panel {
+      height: 100%;
+    }
+
+    core-toolbar {
+
+    }
+
+    .content {
+      background-color: $page-content-color;
+      overflow: auto;
+      width: 100%;
+      height: 100%;
+    }
+
+    .content-form {
+      padding: $form-content-padding;
+    }
+    #topToolbar {
+      background-color: $tool-bar-bg-color;
+      color: $tool-bar-text-color;
+    }
+
+    #menuToolbar {
+      background-color: $left-menu-top-bg-color;
+      color: $left-menu-top-text-color;
+    }
+
+  }
+
+}
+
+.left-nav-menu {
+  background: $left-menu-bg-color;
+  color: #ffffff;
+}
+
+
+@mixin base-button($bg-color) {
+  margin: 0.8em 0em 0.8em 0em;
+  width: 9em;
+  background: $bg-color !important;
+  color: #fff;
+
+  [raisedButton] #ripple,
+  [raisedButton]::shadow #ripple {
+    color: #2a56c6;
+  }
+
+  [raisedButton].colored #focusBg,
+  [raisedButton].colored::shadow #focusBg {
+    background: #3367d6;
+  }
+}
+
+.submit-button {
+  @include base-button(#4285f4);
+}
+
+.secondary-button {
+  @include base-button(#39ac74);
+}
+
+paper-radio-group.blue paper-radio-button::shadow #ink[checked] {
+  color: $radio_btn_blue_color;
+}
+
+paper-radio-group.blue paper-radio-button::shadow #onRadio {
+  background-color: $radio_btn_blue_color;
+}
+
+paper-input-decorator, .defaultFormItem{
+  width: $default_form_item_width;
+}
+
+progress-overlay {
+  width: 100%;
+  height: 100%;
+  top: 0px;
+  position: absolute;
+  //pointer-events: none;
+}
+

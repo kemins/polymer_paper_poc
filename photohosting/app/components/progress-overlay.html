@@ -1,0 +1,67 @@
+<polymer-element id="progressOverlay" name="progress-overlay" attributes="active">
+    <template>
+        <style>
+            :host{
+                width: 100%;
+                height: 100%;
+                margin: 0px;
+                position: relati
+            }
+
+            #backgroundDiv, #contentHolder {
+                width: 100%;
+                height: 100%;
+                margin: 0px;
+                position: relative;
+            }
+
+            #backgroundDiv{
+                position: absolute;
+                background-color: #cccccc;
+                opacity: 0.5;
+            }
+
+            #spinner, #spinnerLabel{
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                margin-left: -3em;
+                margin-top: -3em;
+                width: 6em;
+                height: 6em;
+            }
+
+            #spinnerLabel{
+                vertical-align: middle;
+                text-align: center;
+                line-height: 6em;
+            }
+            #spinner::shadow .circle {
+                border-color: #4285f4;
+            }
+
+        </style>
+
+        <div id="backgroundDiv">
+
+        </div>
+
+        <div id="contentHolder">
+            <label id="spinnerLabel">Loading....</label>
+            <paper-spinner id="spinner" active="true"></paper-spinner>
+        </div>
+    </template>
+
+
+    <script>
+        Polymer({
+            ready: function () {
+            },
+
+            active: false,
+
+            activeChanged: function(){
+            }
+        });
+    </script>
+</polymer-element>

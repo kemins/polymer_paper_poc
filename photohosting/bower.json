@@ -1,0 +1,34 @@
+{
+  "name": "photohosting",
+  "version": "0.0.0",
+  "authors": [
+    "Andrew andriy.kemin@gmail.com"
+  ],
+  "description": "Photo Hosting app",
+  "main": "index.html",
+  "moduleType": [
+    "globals"
+  ],
+  "keywords": [
+    "photo",
+    "hosting"
+  ],
+  "license": "MIT",
+  "homepage": "photo-state.com",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "polymer": "Polymer/polymer#~0.5.1",
+    "core-elements": "Polymer/core-elements#~0.5.1",
+    "paper-elements": "Polymer/paper-elements#~0.5.1",
+    "angular": "~1.3.4",
+    "jquery": "~2.1.1",
+    "ng-polymer-elements": "~0.1.0"
+  }
+}

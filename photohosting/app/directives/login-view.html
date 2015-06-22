@@ -1,0 +1,32 @@
+<section class="content">
+
+    <form novalidate class="content-form" class="content-form">
+
+        <paper-input-decorator label="Your Email"
+                               floatingLabel
+                               error="Email should be in proper format.">
+
+            <input type="email" is="core-input" required ng-model="loginViewCtrl.userLogin.email">
+        </paper-input-decorator>
+
+        <br>
+
+        <paper-input-decorator label="Password"
+                               floatingLabel
+                               error="Password is required.">
+
+            <input type="password" is="core-input" required ng-model="loginViewCtrl.userLogin.password">
+        </paper-input-decorator>
+
+        <br>
+        <paper-checkbox id="loginRememberMeCB"
+                        label="Remember Me"></paper-checkbox>
+        <br>
+        <paper-button raisedButton class="submit-button"
+                      ng-click="loginViewCtrl.submit($event)">Sign In</paper-button>
+        <paper-button raisedButton class="secondary-button"
+                      ng-click="loginViewCtrl.forgotPassword($event)">Remind Pass</paper-button>
+
+    </form>
+
+</section>
